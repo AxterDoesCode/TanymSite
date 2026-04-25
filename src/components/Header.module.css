@@ -1,0 +1,64 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+  padding: 20px 48px;
+  background: var(--natural-cream);
+  border-bottom: 1px solid var(--rule-soft);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--charcoal-stone);
+  border: 0;
+}
+
+.mark { height: 22px; width: auto; display: block; }
+.wordmark { height: 14px; width: auto; display: block; }
+
+.nav {
+  display: flex;
+  gap: 36px;
+}
+
+.navLink {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: var(--tr-caps-md);
+  text-transform: uppercase;
+  color: var(--fg2);
+  border: 0;
+  transition: color var(--dur-quick) var(--ease-quiet);
+}
+
+.navLink:hover { color: var(--charcoal-stone); }
+
+.order {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: var(--tr-caps-md);
+  text-transform: uppercase;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--ritual-bronze);
+  padding: 2px 1px 4px;
+  color: var(--charcoal-stone);
+  cursor: pointer;
+  transition: color var(--dur-quick) var(--ease-quiet);
+}
+
+.order:hover { color: var(--terracotta); }
+.order:active { opacity: 0.85; }
+
+@media (max-width: 800px) {
+  .header { padding: 16px 20px; gap: var(--space-3); }
+  .nav { display: none; }
+  .mark { height: 20px; }
+  .wordmark { height: 12px; }
+}

@@ -1,0 +1,70 @@
+.footer {
+  border-top: 1px solid var(--rule-strong);
+  padding: 56px 48px 40px;
+}
+
+.grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 32px;
+}
+
+.brandWordmark {
+  height: 14px;
+  width: auto;
+  display: block;
+}
+
+.address {
+  font-family: var(--font-serif);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--fg2);
+  margin: 12px 0 0;
+}
+
+.colLabel {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: var(--tr-caps-md);
+  text-transform: uppercase;
+  color: var(--fg2);
+  margin-bottom: 14px;
+}
+
+.link {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 14px;
+  color: var(--charcoal-stone);
+  border: 0;
+  padding: 4px 0;
+  transition: color var(--dur-quick) var(--ease-quiet);
+}
+.link:hover { color: var(--terracotta); }
+
+.divider {
+  border-top: 1px solid var(--rule-faint);
+  margin: 40px 0 0;
+}
+
+.colophon {
+  max-width: 1100px;
+  margin: 20px auto 0;
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-5);
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: var(--tr-caps-sm);
+  text-transform: uppercase;
+  color: var(--fg3);
+}
+
+@media (max-width: 800px) {
+  .footer { padding: 48px 24px 32px; }
+  .grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .colophon { flex-direction: column; gap: 8px; }
+}

@@ -1,0 +1,117 @@
+.hero {
+  padding: 112px 48px 128px;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: var(--tr-caps-md);
+  text-transform: uppercase;
+  color: var(--fg2);
+  margin-bottom: 20px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(44px, 6vw, 80px);
+  line-height: 1.05;
+  letter-spacing: var(--tr-display);
+  margin: 0;
+  color: var(--charcoal-stone);
+  max-width: 520px;
+}
+
+.bronzeRule {
+  width: 64px;
+  height: 1px;
+  background: var(--ritual-bronze);
+  margin-top: 32px;
+  border: 0;
+}
+
+.lede {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--fg2);
+  margin: 28px 0 0;
+  max-width: 420px;
+}
+
+.ctaRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.primary {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  letter-spacing: var(--tr-caps-sm);
+  text-transform: uppercase;
+  background: var(--terracotta);
+  color: var(--fg-on-brand);
+  border: 0;
+  padding: 16px 30px;
+  border-radius: var(--radius-1);
+  cursor: pointer;
+  transition: background var(--dur-quick) var(--ease-quiet),
+              opacity var(--dur-instant) var(--ease-quiet);
+}
+.primary:hover { background: var(--terracotta-deep); }
+.primary:active { opacity: 0.85; }
+
+.secondary {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  letter-spacing: var(--tr-caps-sm);
+  text-transform: uppercase;
+  color: var(--charcoal-stone);
+  padding: 16px 8px;
+  border: 0;
+  align-self: center;
+  transition: color var(--dur-quick) var(--ease-quiet);
+}
+.secondary:hover { color: var(--terracotta); }
+
+.figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--sand-beige);
+  padding: 72px 48px 56px;
+}
+
+.figure img {
+  width: 220px;
+  height: auto;
+}
+
+.figure figcaption {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: var(--tr-caps-md);
+  text-transform: uppercase;
+  color: var(--fg2);
+  margin-top: 24px;
+}
+
+@media (max-width: 800px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 72px 24px 88px;
+    gap: 48px;
+  }
+  .figure { padding: 56px 32px 40px; }
+  .figure img { width: 180px; }
+}
