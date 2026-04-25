@@ -19,7 +19,9 @@ export default function Footer() {
           <div key={c.label}>
             <div className={styles.colLabel}>{c.label}</div>
             {c.links.map((l) => (
-              <a key={l} href="#" className={styles.link}>{l}</a>
+              <span key={l} className={styles.linkRow}>
+                <a href="#" className={styles.link}>{l}</a>
+              </span>
             ))}
           </div>
         ))}

@@ -1,3 +1,4 @@
+import useReveal from "../hooks/useReveal.js";
 import styles from "./Ritual.module.css";
 
 const STEPS = [
@@ -7,8 +8,9 @@ const STEPS = [
 ];
 
 export default function Ritual() {
+  const ref = useReveal();
   return (
-    <section id="ritual" className={styles.section}>
+    <section id="ritual" className={styles.section} ref={ref}>
       <div className={styles.container}>
         <div className={styles.eyebrow}>Brewing ritual</div>
         <h2 className={styles.title}>Held, not hurried.</h2>
@@ -23,6 +25,7 @@ export default function Ritual() {
             </article>
           ))}
         </div>
+        <p className={styles.coda}>Approximately six minutes, start to pour.</p>
       </div>
     </section>
   );

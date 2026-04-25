@@ -4,12 +4,13 @@ import styles from "./Hero.module.css";
 export default function Hero({ onOrder }) {
   return (
     <section id="top" className={styles.hero}>
-      <div>
-        <div className={styles.eyebrow}>Tary Blend · light roast</div>
+      <div className={styles.text}>
+        <p className={styles.eyebrow}>Tary Blend · light roast</p>
         <h1 className={styles.title}>
-          Tea and tary,<br />from the steppe.
+          Tea and <em>tary</em>,<br />
+          from the <span className={styles.accent}>steppe</span>.
         </h1>
-        <hr className={styles.bronzeRule} aria-hidden="true" />
+        <hr className={styles.divider} aria-hidden="true" />
         <p className={styles.lede}>
           Black tea blended with roasted Kazakh millet. Traditionally shared, never rushed.
         </p>
@@ -24,8 +25,12 @@ export default function Hero({ onOrder }) {
       </div>
 
       <figure className={styles.figure}>
-        <img src={markYurt} alt="Yurt and steppe horizon mark" />
-        <figcaption>Almaty · Kazakhstan</figcaption>
+        <img className={styles.figureMark} src={markYurt} alt="Yurt and steppe horizon mark" />
+        <hr className={styles.figureRule} aria-hidden="true" />
+        <figcaption className={styles.figureMeta}>
+          <span>Almaty · Kazakhstan</span>
+          <span className={styles.quiet}>MMXXVI · No. 001</span>
+        </figcaption>
       </figure>
     </section>
   );

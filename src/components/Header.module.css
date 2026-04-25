@@ -8,7 +8,15 @@
   gap: var(--space-5);
   padding: 20px 48px;
   background: var(--natural-cream);
-  border-bottom: 1px solid var(--rule-soft);
+  border-bottom: 1px solid var(--rule-faint);
+  transition: border-color var(--dur-slow) var(--ease-quiet),
+              padding var(--dur-slow) var(--ease-quiet);
+}
+
+.header[data-scrolled="true"] {
+  border-bottom-color: var(--rule-strong);
+  padding-top: 14px;
+  padding-bottom: 14px;
 }
 
 .brand {

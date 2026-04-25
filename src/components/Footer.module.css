@@ -35,15 +35,28 @@
 }
 
 .link {
-  display: block;
+  display: inline-block;
   font-family: var(--font-serif);
   font-size: 14px;
   color: var(--charcoal-stone);
   border: 0;
   padding: 4px 0;
+  position: relative;
   transition: color var(--dur-quick) var(--ease-quiet);
 }
-.link:hover { color: var(--terracotta); }
+.link::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 4px;
+  height: 1px;
+  background: var(--ritual-bronze);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform var(--dur-slow) var(--ease-quiet);
+}
+.link:hover::after { transform: scaleX(1); }
+
+.linkRow { display: block; padding: 0; }
 
 .divider {
   border-top: 1px solid var(--rule-faint);

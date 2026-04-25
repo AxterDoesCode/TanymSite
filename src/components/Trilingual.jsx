@@ -1,3 +1,4 @@
+import useReveal from "../hooks/useReveal.js";
 import styles from "./Trilingual.module.css";
 
 const COLUMNS = [
@@ -7,8 +8,9 @@ const COLUMNS = [
 ];
 
 export default function Trilingual() {
+  const ref = useReveal();
   return (
-    <section id="origin" className={styles.section}>
+    <section id="origin" className={styles.section} ref={ref}>
       <div className={styles.container}>
         <div className={styles.eyebrow}>Origin · in three languages</div>
         <div className={styles.rule} aria-hidden="true" />

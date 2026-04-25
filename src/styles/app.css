@@ -31,6 +31,43 @@ body::before {
 
 #root { position: relative; z-index: 1; }
 
+/* Reveal-on-scroll. Opacity only — no transform. */
+[data-revealed] {
+  opacity: 0;
+  transition: opacity var(--dur-slow) var(--ease-quiet);
+}
+[data-revealed="true"] { opacity: 1; }
+
+/* Bronze underline — drawn from left on hover.
+ * Used by anchor links throughout. The signature accent of the brand,
+ * applied sparingly. */
+.link-bronze {
+  display: inline-block;
+  position: relative;
+  color: var(--charcoal-stone);
+  border: 0;
+  padding-bottom: 0.05em;
+  transition: color var(--dur-quick) var(--ease-quiet);
+}
+.link-bronze::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--ritual-bronze);
+  transform: scaleX(var(--bronze-rest, 0));
+  transform-origin: left center;
+  transition: transform var(--dur-slow) var(--ease-quiet);
+}
+.link-bronze:hover::after { transform: scaleX(1); }
+.link-bronze.always { --bronze-rest: 1; }
+
 @media (max-width: 800px) {
   .section { padding: var(--space-9) var(--space-5); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-revealed] { opacity: 1 !important; transition: none !important; }
+  .link-bronze::after { transition: none !important; }
 }

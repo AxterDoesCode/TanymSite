@@ -1,0 +1,114 @@
+.section {
+  padding: 128px 48px;
+  background: var(--sand-beige);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: var(--tr-caps-md);
+  text-transform: uppercase;
+  color: var(--fg2);
+  margin: 0;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(36px, 4.4vw, 56px);
+  line-height: 1.1;
+  letter-spacing: var(--tr-display);
+  color: var(--charcoal-stone);
+  margin: 12px 0 32px;
+  max-width: 520px;
+}
+
+/* Pull quote — italic display, hairline-bordered, generous breathing room. */
+.pull {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(22px, 2.2vw, 28px);
+  line-height: 1.45;
+  color: var(--charcoal-stone);
+  margin: 32px 0;
+  padding: 24px 0 24px 28px;
+  border-left: 1px solid var(--ritual-bronze);
+  max-width: 540px;
+}
+
+.body {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--fg1);
+  margin: 0 0 20px;
+  max-width: 560px;
+}
+
+.body em { color: var(--charcoal-stone); }
+
+.aside {
+  position: sticky;
+  top: 96px;
+  border-top: 1px solid var(--rule-strong);
+  padding-top: 24px;
+}
+
+.asideLabel {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: var(--tr-caps-md);
+  text-transform: uppercase;
+  color: var(--fg3);
+  margin: 0 0 16px;
+}
+
+.asideBody {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--fg2);
+  margin: 0 0 24px;
+}
+
+.specs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--rule-faint);
+}
+
+.specs li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--rule-faint);
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: var(--tr-caps-sm);
+  text-transform: uppercase;
+  color: var(--fg2);
+}
+
+.specs li b {
+  color: var(--charcoal-stone);
+  font-weight: 500;
+}
+
+@media (max-width: 800px) {
+  .section { padding: 88px 24px; }
+  .container { grid-template-columns: 1fr; gap: 56px; }
+  .aside { position: static; }
+}
